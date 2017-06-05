@@ -37,22 +37,20 @@ from sklearn.metrics import accuracy_score
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import AdaBoostClassifier
 
-knn = KNeighborsClassifier(n_neighbors=5)
+knn = KNeighborsClassifier(n_neighbors=4)
 gnb = GaussianNB()
-rfc = RandomForestClassifier(n_estimators=10)
-adabc = AdaBoostClassifier(n_estimators=100)
+rf = RandomForestClassifier(n_estimators=10)
+adab = AdaBoostClassifier(n_estimators=100)
 
 
-clfs = [knn, gnb, rfc, adabc]
+clfs = [knn, gnb, rf, adab]
 
 for clf in clfs:
     
     clf = clf.fit(features_train, labels_train)
     pred = clf.predict(features_test)
-    print(clf,'Accuracy: {0}'.format(accuracy_score(pred, labels_test)), '\n')
+    print(clf,'\n','Accuracy: {0}'.format(accuracy_score(pred, labels_test)), '\n')
     
-
-
 
 
 try:

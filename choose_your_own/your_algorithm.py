@@ -42,7 +42,7 @@ knn = KNeighborsClassifier(n_neighbors=4)
 gnb = GaussianNB()
 rf = RandomForestClassifier(n_estimators=10)
 adab = AdaBoostClassifier(n_estimators=100)
-dt = tree.DecisionTreeClassifier()
+dt = DecisionTreeClassifier(random_state=0)
 
 
 clfs = [knn, gnb, rf, adab, dt]

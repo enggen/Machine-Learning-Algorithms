@@ -36,14 +36,16 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import AdaBoostClassifier
+from sklearn.tree import DecisionTreeClassifier
 
 knn = KNeighborsClassifier(n_neighbors=4)
 gnb = GaussianNB()
 rf = RandomForestClassifier(n_estimators=10)
 adab = AdaBoostClassifier(n_estimators=100)
+dt = tree.DecisionTreeClassifier()
 
 
-clfs = [knn, gnb, rf, adab]
+clfs = [knn, gnb, rf, adab, dt]
 
 for clf in clfs:
     

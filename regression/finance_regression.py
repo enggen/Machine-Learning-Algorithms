@@ -46,7 +46,7 @@ from sklearn.linear_model import LinearRegression
 reg = LinearRegression()
 reg.fit(feature_train, target_train)
 
-print('Slope:', reg.coef_[0], 'Intercept:', reg.intercept_)
+print('Slope:', reg.coef_, 'Intercept:', reg.intercept_)
 print('Training Score:', reg.score(feature_train, target_train))
 print('Testing Score:', reg.score(feature_test, target_test))
 
@@ -72,9 +72,12 @@ try:
     plt.plot( feature_test, reg.predict(feature_test) )
 except NameError:
     pass
+
 reg.fit(feature_test, target_test)
+print('Slope of New Reg. line:', reg.coef_, 'Intercept:', reg.intercept_)
+
 plt.plot(feature_train, reg.predict(feature_train), color="b") 
-plt.xlabel(features_list[1])
+plt.xlabel(features_list[0])
 plt.ylabel(features_list[0])
 plt.legend()
 plt.show()

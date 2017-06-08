@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 """
-    Starter code for the regression mini-project.
+    Completed code for the regression mini-project.
     
     Loads up/formats a modified version of the dataset
     (why modified?  we've removed some trouble points
@@ -19,7 +19,6 @@ sys.path.append("../tools/")
 from feature_format import featureFormat, targetFeatureSplit
 
 dictionary = "../final_project/final_project_dataset_modified.pkl"
-
 with open(dictionary, 'rb') as words_file_handler:
         dictionary = pickle.load(words_file_handler)
 
@@ -44,8 +43,8 @@ test_color = "r"
 from sklearn.linear_model import LinearRegression
 
 reg = LinearRegression()
-reg.fit(feature_train, target_train)
 
+reg.fit(feature_train, target_train)
 print('Slope:', reg.coef_, 'Intercept:', reg.intercept_)
 print('Training Score:', reg.score(feature_train, target_train))
 print('Testing Score:', reg.score(feature_test, target_test))

@@ -7,3 +7,4 @@
 5. [AdaBoost]()
 6. [RandomForest]()
 7. [Regression]()
+8. [PCA]()

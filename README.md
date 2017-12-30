@@ -1,4 +1,5 @@
 # Intro to Machine Learning
+### Machine Learning Algorithms 
 ### Udacity Intro to Machine Learning, ud120- projects
 1. [Naive Bayes](https://github.com/enggen/Intro-to-Machine-Learning/blob/master/naive_bayes/nb_author_id.py)
 2. [SVM](https://github.com/enggen/Intro-to-Machine-Learning/blob/master/svm/svm_author_id.py)
